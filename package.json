@@ -1,0 +1,25 @@
+{
+  "name": "ngx-mqtt",
+  "version": "7.0.2",
+  "scripts": {
+    "postinstall": "node postinstall"
+  },
+  "peerDependencies": {
+    "@angular/common": "^9.1.12",
+    "@angular/core": "^9.1.12"
+  },
+  "dependencies": {
+    "mqtt": "4.1.0",
+    "tslib": "^1.10.0"
+  },
+  "main": "bundles/ngx-mqtt.umd.js",
+  "module": "fesm5/ngx-mqtt.js",
+  "es2015": "fesm2015/ngx-mqtt.js",
+  "esm5": "esm5/ngx-mqtt.js",
+  "esm2015": "esm2015/ngx-mqtt.js",
+  "fesm5": "fesm5/ngx-mqtt.js",
+  "fesm2015": "fesm2015/ngx-mqtt.js",
+  "typings": "ngx-mqtt.d.ts",
+  "metadata": "ngx-mqtt.metadata.json",
+  "sideEffects": false
+}
