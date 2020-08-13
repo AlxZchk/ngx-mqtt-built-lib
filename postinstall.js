@@ -1,4 +1,3 @@
-console.log('Vars:', { env: process.env, var: process.env['mqtt-disable-hook']})
 if (process.env['mqtt-disable-hook']) {
   return 0;
 }
@@ -8,8 +7,7 @@ const f = '../node_modules/@angular-devkit/build-angular/src/angular-cli-files/m
 
 fs.readFile(f, 'utf8', function (err,data) {
   if (err) {
-    console.error(err);
-    return 1;
+    throw err;
   }
   // at some moment angular-cli tam disabled node polyfills and stubs in webpack
   // from:
@@ -20,7 +18,7 @@ fs.readFile(f, 'utf8', function (err,data) {
   fs.writeFile(f, result, 'utf8', function (err) {
     if (err) {
       console.error(err);
-      return 1;
+      throw err;
     }
   });
 });
