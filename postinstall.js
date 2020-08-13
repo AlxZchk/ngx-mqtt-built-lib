@@ -19,7 +19,7 @@ fs.readFile(f, 'utf8', function (err,data) {
   const result = (data.replace(/node: false/g, "node: {global: true}"));
   fs.writeFile(f, result, 'utf8', function (err) {
     if (err) {
-      console.log(err);
+      console.error(err);
       return 1;
     }
   });
