@@ -1,3 +1,4 @@
+console.log('Vars:', { env: process.env, var: process.env['mqtt-disable-hook']})
 if (process.env['mqtt-disable-hook']) {
   return 0;
 }
